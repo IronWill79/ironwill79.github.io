@@ -4,13 +4,22 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="IronWill79's tech blog.">
   <main>
-    <a href="/">Home</a>
+    <a class="anchor" href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/about/">Blog</a>
 
     <h1>
       Welcome to <span class="text-gradient">IronWill79's tech blog</span>
     </h1>
+
+    <div class="flex items-center flex-col">
+      <h2 class="text-2xl font-bold">Current worldwide cyberthreat live map</h2>
+      <iframe
+        width="640"
+        height="640"
+        src="https://cybermap.kaspersky.com/en/widget/dynamic/dark"
+        frameborder="0"></iframe>
+    </div>
   </main>
 </Layout>
 
