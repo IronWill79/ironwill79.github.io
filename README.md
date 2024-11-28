@@ -2,6 +2,8 @@
 
 ## Topics
 
+- Bare metal microcontrollers
+- Emulation
 - Cybersecurity
 
 # Astro Starter Kit: Basics
