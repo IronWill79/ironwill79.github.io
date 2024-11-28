@@ -1,50 +1,34 @@
 ---
+import Navigation from "../components/Navigation.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="IronWill79's tech blog.">
-  <main>
-    <a class="anchor" href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/about/">Blog</a>
+<Layout title="Home">
+  <main class="prose !prose-invert">
+    <Navigation />
 
     <h1>
       Welcome to <span class="text-gradient">IronWill79's tech blog</span>
     </h1>
 
     <div class="flex items-center flex-col">
-      <h2 class="text-2xl font-bold">Current worldwide cyberthreat live map</h2>
+      <h2>Current worldwide cyberthreat live map</h2>
       <iframe
         width="640"
         height="640"
         src="https://cybermap.kaspersky.com/en/widget/dynamic/dark"
         frameborder="0"></iframe>
     </div>
+
+    <!-- Example of Tailwindcss aspect ratio to embed a video -->
+    <!--
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe
+        src="https://www.youtube.com/embed/YZ3XBfGj3JA"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    -->
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
-</style>

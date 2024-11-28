@@ -1,12 +1,11 @@
 ---
+import Navigation from "../components/Navigation.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="IronWill79's tech blog.">
-  <main>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/about/">Blog</a>
+<Layout title="About">
+  <main class="prose !prose-invert">
+    <Navigation />
 
     <h1>About Me</h1>
     <h2>... and my new Astro site!</h2>
@@ -22,22 +21,3 @@ import Layout from "../layouts/Layout.astro";
     </p>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-</style>

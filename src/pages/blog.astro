@@ -1,34 +1,15 @@
 ---
+import Navigation from "../components/Navigation.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="IronWill79's tech blog.">
-  <main>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+<Layout title="Blog">
+  <main class="prose !prose-invert">
+    <Navigation />
 
     <h1>My Astro Learning Blog</h1>
 
     <p>This is where I will post about my journey learning Astro.</p>
+    <ul><li><a href="/posts/post-1/">Post 1</a></li></ul>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
-  }
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-</style>
