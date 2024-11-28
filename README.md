@@ -1,3 +1,9 @@
+# Will's GitHub Pages blog
+
+## Topics
+
+- Cybersecurity
+
 # Astro Starter Kit: Basics
 
 ```sh
