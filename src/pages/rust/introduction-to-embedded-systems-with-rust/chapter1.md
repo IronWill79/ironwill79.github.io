@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/MarkdownPostLayout.astro'
+layout: '../../../layouts/MarkdownPostLayout.astro'
 title: 'Introduction to Embedded Systems with Rust'
 pubDate: 2024-12-09
 description: 'Learn the fundamentals of embedded systems, and developing applications for them in Rust'

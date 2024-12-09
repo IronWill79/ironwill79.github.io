@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/MarkdownPostLayout.astro'
+layout: '../../../layouts/MarkdownPostLayout.astro'
 title: 'Python for Non-Programmers'
 pubDate: 2024-12-09
 description: 'Learn the fundamentals of Python'
