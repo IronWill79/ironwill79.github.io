@@ -10,7 +10,7 @@
     @apply bg-[#f1f5f9] dark:bg-[#0d0950] dark:text-white font-sans;
   }
   body {
-    @apply leading-[1.5] max-w-[80ch] mx-auto my-0 p-4 prose;
+    @apply leading-[1.5] max-w-[80ch] mx-auto my-0 p-4 prose dark:prose-invert;
   }
   h1 {
     @apply font-bold mx-0 my-4 text-[2.5rem];
