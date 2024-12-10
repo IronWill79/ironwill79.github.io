@@ -1,3 +1,11 @@
+# Will's GitHub Pages blog
+
+## Topics
+
+- Bare metal/embedded systems
+- Cybersecurity
+- Emulation
+
 # Astro Starter Kit: Minimal
 
 ```sh
