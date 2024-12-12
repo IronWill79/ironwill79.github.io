@@ -14,7 +14,7 @@ const blogSchema = z.object({
 });
 
 const blog = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.md', base: './src/blog' }),
+  loader: glob({ base: './src/blog', pattern: '**/[^_]*.md' }),
   schema: blogSchema
 });
 
@@ -27,8 +27,21 @@ const fundamentalsSchema = z.object({
 });
 
 const fundamentals = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.md', base: './src/fundamentals' }),
+  loader: glob({ base: './src/fundamentals', pattern: '**/[^_]*.md' }),
   schema: fundamentalsSchema
 });
 
-export const collections = { blog, fundamentals };
+const osdevSchema = z.object({
+  title: z.string(),
+  pubDate: z.date(),
+  description: z.string(),
+  author: z.string(),
+  tags: z.array(z.string()),
+});
+
+const osdev = defineCollection({
+  loader: glob({ base: './src/os-dev', pattern: '**/[^_]*.md' }),
+  schema: osdevSchema,
+})
+
+export const collections = { blog, fundamentals, osdev };

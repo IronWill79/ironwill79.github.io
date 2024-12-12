@@ -1,10 +1,10 @@
 ---
+import type { GetStaticPaths } from "astro";
 import { getCollection, render } from "astro:content";
 import MarkdownPostLayout from "../../layouts/MarkdownPostLayout.astro";
-import type { GetStaticPaths } from "astro";
 
 export const getStaticPaths = (async () => {
-  const posts = await getCollection("fundamentals");
+  const posts = await getCollection("osdev");
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },

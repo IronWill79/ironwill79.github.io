@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 const allBlogPosts = await getCollection("blog");
 const allFundamentalsPosts = await getCollection("fundamentals");
+const allOSDevPosts = await getCollection("osdev");
 const pageTitle = "My Astro Learning Blog";
 ---
 
@@ -28,6 +29,16 @@ const pageTitle = "My Astro Learning Blog";
     {
       allFundamentalsPosts.map((post) => (
         <BlogPost url={`/fundamentals/${post.id}`} title={post.data.title} />
+      ))
+    }
+  </ul>
+
+  <h2 class="font-bold text-lg">Operating Systems Development</h2>
+
+  <ul>
+    {
+      allOSDevPosts.map((post) => (
+        <BlogPost url={`/os-dev/${post.id}`} title={post.data.title} />
       ))
     }
   </ul>
