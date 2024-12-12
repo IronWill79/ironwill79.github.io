@@ -108,3 +108,9 @@ For this simple kernel, you only need three files
 
 ## Step 3 - Booting the OS
 
+To start the OS, a bootloader must be used to load it. In this tutorial, I'll use [GRUB](https://wiki.osdev.org/GRUB).
+
+The first task is how the bootloader starts the kernel. OSDevers like me are lucky because there exists a Multiboot Standard, which describes an easy interface between the bootloader and the OS kernel. It works by using a few magic values (known as the multiboot header) which is searched for by the bootloader. When it sees these values, it recognizes the kernel as multiboot compatible and knows how to load us.
+
+Since there is no stack yet, and the global variables need to be set correctly, it must be done in assembly.
+
