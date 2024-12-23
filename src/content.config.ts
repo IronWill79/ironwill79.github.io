@@ -44,6 +44,19 @@ const lfs = defineCollection({
   schema: lfsSchema,
 });
 
+const linuxKernelSchema = z.object({
+  title: z.string(),
+  pubDate: z.date(),
+  description: z.string(),
+  author: z.string(),
+  tags: z.array(z.string()),
+});
+
+const linuxkernel = defineCollection({
+  loader: glob({ base: './src/linuxkernel', pattern: '**/[^_]*.md' }),
+  schema: linuxKernelSchema,
+});
+
 const osdevSchema = z.object({
   title: z.string(),
   pubDate: z.date(),
@@ -57,4 +70,4 @@ const osdev = defineCollection({
   schema: osdevSchema,
 });
 
-export const collections = { blog, fundamentals, lfs, osdev };
+export const collections = { blog, fundamentals, lfs, linuxkernel, osdev };
